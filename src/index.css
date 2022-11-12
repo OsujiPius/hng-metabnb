@@ -168,6 +168,32 @@ code {
   margin-top: -5px;
 }
 
+.sub_nav > div {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.sub_nav > div > p {
+  margin-top: 13px;
+  font-size: 18px;
+  color: #434343;
+}
+
+.sub_nav button {
+  height: 46px;
+  width: 160px;
+  background: linear-gradient(124.4deg, #ffffff 10.8%, #ffffff 87.34%);
+  border: 1px solid #b4b4b4;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
 .footer {
   height: auto;
   background: #1d1d1e;
