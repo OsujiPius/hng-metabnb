@@ -51,14 +51,14 @@ export default function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active my-2 mx-3" href="#">
+                <Link className="nav-link active my-2 mx-3" href="#">
                   NFTs
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active my-2 mx-3" href="#">
+                <Link className="nav-link active my-2 mx-3" to="#">
                   Community
-                </a>
+                </Link>
               </li>
             </ul>
 
