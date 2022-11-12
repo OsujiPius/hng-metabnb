@@ -7,6 +7,7 @@ import ModalButton from "../atoms/ModalButton";
 import Connect from "../../assests/images/walletconnect.svg";
 import Metamask from "../../assests/images/meta.svg";
 import Arrow from "../../assests/icons/arrow.svg";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,13 +18,13 @@ export default function Header() {
 
   return (
     <>
-      <nav class="navbar navbar-expand-xl navbar-light bg-white sticky-top">
-        <div class="container">
-          <a class="navbar-brand" href="/">
+      <nav className="navbar navbar-expand-xl navbar-light bg-white sticky-top">
+        <div className="container">
+          <a className="navbar-brand" href="/">
             <img src={Logo} alt="logo" height={30} />
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarBasic"
@@ -31,40 +32,31 @@ export default function Header() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarBasic">
-            <ul class="navbar-nav mx-auto mb-2 mb-xl-0">
-              <li class="nav-item text-white">
-                <a
-                  class="nav-link active my-2 mx-3"
+          <div className="collapse navbar-collapse" id="navbarBasic">
+            <ul className="navbar-nav mx-auto mb-2 mb-xl-0">
+              <li className="nav-item text-white">
+                <Link
+                  className="nav-link active my-2 mx-3"
                   aria-current="page"
-                  href="https://metamask.io/swaps.html"
+                  to="/"
                 >
                   Home
-                </a>
+                </Link>
               </li>
-              <li class="nav-item text-white">
-                <a
-                  class="nav-link active my-2 mx-3"
-                  href="https://metamask.io/faqs.html"
-                >
+              <li className="nav-item text-white">
+                <Link className="nav-link active my-2 mx-3" to="/place-to-stay">
                   Place to stay
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active my-2 mx-3"
-                  href="https://metamask.io/about.html"
-                >
+              <li className="nav-item">
+                <a className="nav-link active my-2 mx-3" href="#">
                   NFTs
                 </a>
               </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active my-2 mx-3"
-                  href="https://docs.metamask.io/guide/"
-                >
+              <li className="nav-item">
+                <a className="nav-link active my-2 mx-3" href="#">
                   Community
                 </a>
               </li>
