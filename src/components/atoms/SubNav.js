@@ -28,7 +28,7 @@ export default function SubNav() {
       <div className="col-lg-1 col-md-6 col-6">
         <p>Farm</p>
       </div>
-      <div className="col-lg-2 col-md-6 col-6">
+      <div className="col-lg-2 col-md-6 col-12">
         <button>
           Location
           <img src={Setting} alt="" />
