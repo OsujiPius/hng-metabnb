@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import Logo from "../../assests/icons/logo.svg";
 import Modal from "../atoms/Modal";
+import Close from "../../assests/icons/close.svg";
+import ModalButton from "../atoms/ModalButton";
+import Connect from "../../assests/images/walletconnect.svg";
+import Metamask from "../../assests/images/meta.svg";
+import Arrow from "../../assests/icons/arrow.svg";
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -81,7 +86,15 @@ export default function Header() {
       </nav>
       {isModalOpen && (
         <Modal open={isModalOpen} handleToUpdate={handleToUpdate}>
-          Test
+          <div className="modal_head d-flex align-items-center justify-content-between px-sm-5 px-4">
+            <p className="fs-4 fw-bolder mt-3">Connect wallet</p>
+            <img src={Close} alt="" onClick={() => handleToUpdate(false)} />
+          </div>
+          <div className="mt-4">
+            <p className="ms-sm-5 ms-4">Choose your preferred wallet:</p>
+            <ModalButton src={Metamask} icon={Arrow} />
+            <ModalButton src={Connect} icon={Arrow} />
+          </div>
         </Modal>
       )}
     </>

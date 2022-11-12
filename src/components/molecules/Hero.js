@@ -3,7 +3,7 @@ import HeroImg from "../../assests/images/hero-img.svg";
 
 export default function Hero() {
   return (
-    <div className="h-auto">
+    <div className="h-auto pt-4">
       <div class="w-100 container row mx-auto h-100">
         <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center flex-column py-5">
           <h1 className="hero_heading">
