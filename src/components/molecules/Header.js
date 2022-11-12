@@ -68,10 +68,12 @@ export default function Header() {
                   "linear-gradient(90deg, #A02279 11.45%, #A02279 11.45%)",
                 border: "#A02279",
                 outline: "none",
+                padding: "8px 15px",
+                borderRadius: "10px",
               }}
               onClick={() => handleToUpdate(true)}
             >
-              Connect
+              Connect wallet
             </Button>
           </div>
         </div>
