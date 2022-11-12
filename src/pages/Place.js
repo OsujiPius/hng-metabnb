@@ -1,5 +1,10 @@
 import React from "react";
+import CardsSection from "../components/molecules/CardsSection";
 
 export default function Place() {
-  return <div>Place</div>;
+  return (
+    <div>
+      <CardsSection />
+    </div>
+  );
 }
