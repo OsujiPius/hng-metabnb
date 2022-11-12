@@ -16,6 +16,13 @@ export default function Header() {
     setIsModalOpen(action);
   };
 
+  const handleCollapse = () => {
+    const nav = document.getElementById("navbarBasic");
+    const btn = document.getElementById("navbarBtn");
+    nav.classList.remove("show");
+    btn.classList.add("collapsed");
+  };
+
   return (
     <>
       <nav className="navbar navbar-expand-xl navbar-light bg-white sticky-top">
@@ -26,6 +33,7 @@ export default function Header() {
           <button
             className="navbar-toggler"
             type="button"
+            id="navbarBtn"
             data-bs-toggle="collapse"
             data-bs-target="#navbarBasic"
             aria-controls="navbarBasic"
@@ -41,22 +49,35 @@ export default function Header() {
                   className="nav-link active my-2 mx-3"
                   aria-current="page"
                   to="/"
+                  onClick={handleCollapse}
                 >
                   Home
                 </Link>
               </li>
               <li className="nav-item text-white">
-                <Link className="nav-link active my-2 mx-3" to="/place-to-stay">
+                <Link
+                  className="nav-link active my-2 mx-3"
+                  to="/place-to-stay"
+                  onClick={handleCollapse}
+                >
                   Place to stay
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active my-2 mx-3" href="#">
+                <Link
+                  className="nav-link active my-2 mx-3"
+                  href="#"
+                  onClick={handleCollapse}
+                >
                   NFTs
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active my-2 mx-3" to="#">
+                <Link
+                  className="nav-link active my-2 mx-3"
+                  to="#"
+                  onClick={handleCollapse}
+                >
                   Community
                 </Link>
               </li>
